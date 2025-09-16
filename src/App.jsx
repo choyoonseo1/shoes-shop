@@ -9,9 +9,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import data from './data/data';
 
 function App() {
- // 상품정보를 갖는 product 스테이트를 만든다.
+  // 상품정보를 갖는 product 스테이트를 만든다.
   const [product, setProduct] = useState(data);
-  console.log(product)
+
   return (
     <>
       {/* 네이게이션 바 영역 시작 */}
@@ -33,21 +33,21 @@ function App() {
         <Row>
           <Col className="text-center">
             <img src='https://zzzmini.github.io/images/shoes1.jpg'
-              width='80%'/>
-              <h4>상품명</h4>
-              <p>상품설명</p>
+              width='80%' />
+            <h4>상품명</h4>
+            <p>상품설명</p>
           </Col>
           <Col>
             <img src={img_2}
-              width='80%'/>
-              <h4>상품명</h4>
-              <p>상품설명</p>
+              width='80%' />
+            <h4>상품명</h4>
+            <p>상품설명</p>
           </Col>
           <Col>
             <img src={img_3}
-              width='80%'/>
-              <h4>상품명</h4>
-              <p>상품설명</p>
+              width='80%' />
+            <h4>상품명</h4>
+            <p>상품설명</p>
           </Col>
         </Row>
       </Container>
