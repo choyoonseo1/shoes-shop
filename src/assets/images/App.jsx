@@ -9,8 +9,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import data from './data/data';
 
 function App() {
-  //
-  const[product, setProduct] = useState
 
   return (
     <>
