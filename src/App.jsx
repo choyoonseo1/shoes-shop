@@ -9,9 +9,9 @@ import { Container, Row, Col } from 'react-bootstrap';
 import data from './data/data';
 
 function App() {
-  //
-  const[product, setProduct] = useState
-
+ // 상품정보를 갖는 product 스테이트를 만든다.
+  const [product, setProduct] = useState(data);
+  console.log(product)
   return (
     <>
       {/* 네이게이션 바 영역 시작 */}
