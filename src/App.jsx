@@ -7,6 +7,9 @@ import img_2 from './assets/images/shoes2.jpg';
 import img_3 from './assets/images/shoes3.jpg';
 import { Container, Row, Col } from 'react-bootstrap';
 import data from './data/data';
+import { useState } from 'react';
+import Product from './Product';
+
 
 function App() {
   // 상품정보를 갖는 product 스테이트를 만든다.
@@ -22,36 +25,26 @@ function App() {
       <div className='main-bg'
         style={{ backgroundImage: `url('${bg_png}')` }}
       />
-
-
       {/* 메인대문사진 영역 끝 */}
+
       {/* 상품 진열 영역 시작 */}
 
 
       {/* 상품 진열 영역 끝 */}
       <Container>
         <Row>
-          <Col className="text-center">
-            <img src='https://zzzmini.github.io/images/shoes1.jpg'
-              width='80%' />
-            <h4>상품명</h4>
-            <p>상품설명</p>
-          </Col>
-          <Col>
-            <img src={img_2}
-              width='80%' />
-            <h4>상품명</h4>
-            <p>상품설명</p>
-          </Col>
-          <Col>
-            <img src={img_3}
-              width='80%' />
-            <h4>상품명</h4>
-            <p>상품설명</p>
-          </Col>
+          {
+            product.map((shoes, index) => {
+              return (
+                <Col key={shoes.id} className="text-center" >
+                 {/* product 콤포넌트 자리 */}
+                 <Product shoes={shoes} />    
+                  </Col>
+              )
+            })
+          }
         </Row>
       </Container>
-
     </>
   );
 }
