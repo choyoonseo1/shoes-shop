@@ -4,6 +4,7 @@
   /* src밑에 있는 애들은 상대 참조 */
   /* /는 public폴더를 가리킴 */
   background-image: url('/images/bg.jpg');
+  height: 320px;
   background-size: cover;
   background-position: center;
 }
